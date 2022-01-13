@@ -2,7 +2,7 @@
     font-family: 'yeon_sungregular';
     src: url('../fonts/yeonsung-regular-webfont.woff2') format('woff2'),
          url('../fonts/yeonsung-regular-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
     font-display:swap;
 }
@@ -305,7 +305,7 @@ a:hover {
     padding: 3px 15px;
     font-size: 25px;
     font-weight: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 44px;
     font-family: "yeon_sungregular", sans-serif;
 }
@@ -660,7 +660,7 @@ label,
 .btn,
 a {
     font-family: "helvetica";
-    font-weight: 400;
+    font-weight: 700;
     color: #575757!important;
 }
 
@@ -766,7 +766,14 @@ h4 {
     background-color: rgba(165, 147, 99, 0.7);
     padding: 40px 40px 40px 40px;
 }
-
+blockquote{
+    border-left: none;
+    font-size: 20px;
+    text-align: center;
+    color: #4d4d4d!important;
+    font-style: italic;
+    padding: 0px 0px;
+}
 .bold-link {
     font-weight: 900;
     text-decoration: underline!important;
