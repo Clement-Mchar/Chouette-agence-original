@@ -2,10 +2,11 @@
     font-family: 'yeon_sungregular';
     src: url('../fonts/yeonsung-regular-webfont.woff2') format('woff2'),
          url('../fonts/yeonsung-regular-webfont.woff') format('woff');
-    font-weight: 700;
+    font-weight: normal;
     font-style: normal;
     font-display:swap;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -24,15 +25,6 @@ button {
 a:hover {
     text-decoration: none;
     cursor: pointer;
-}
-
-#page-loading-blocs-notifaction {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 100000;
-    background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
 }
 
 .bloc {
@@ -99,7 +91,7 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url("img/texture-paper.webp");
+    background: url("../img/texture-paper.webp");
     background-size: 280px 280px;
 }
 
@@ -305,7 +297,7 @@ a:hover {
     padding: 3px 15px;
     font-size: 25px;
     font-weight: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 44px;
     font-family: "yeon_sungregular", sans-serif;
 }
@@ -335,7 +327,7 @@ a:hover {
 .nav > li {
     float: left;
     margin-top: 4px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .navbar-nav .open .dropdown-menu > li > a {
@@ -536,7 +528,7 @@ button {
 }
 
 .showScrollTop {
-    font-size: 14px;
+    font-size: 18px;
     opacity: 1;
 }
 
@@ -582,7 +574,8 @@ a[data-lightbox]:hover img {
 }
 
 #lightbox-modal .modal-dialog img {
-    max-height: 90vh;
+    width: 600px;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -656,11 +649,10 @@ h4,
 h5,
 h6,
 p,
-label,
 .btn,
 a {
     font-family: "helvetica";
-    font-weight: 700;
+    font-weight: 400;
     color: #575757!important;
 }
 
@@ -687,8 +679,35 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 18px;
 }
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+    text-align: center;
+
+}
+.links {
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+}
+.links a {
+    font-weight: 600;
+}
+.contact p {
+    font-weight: 600;
+}
+label{
+    font-family: "helvetica";
+    font-weight: 600;
+    color: #575757!important;
+    font-size: 14px;
+}
+
 
 .tight-width-whitespace {
     max-width: 600px;
@@ -705,22 +724,25 @@ p {
     color: #FFFFFF!important;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
 }
 
 .social {
     max-width: 400px;
     margin: auto auto auto auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 h2 {
     font-size: 22px;
     line-height: 1.4em;
+    font-weight: 700;
 }
 
 h3 {
-    font-size: 15px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: 700;
     color: #333333!important;
@@ -751,6 +773,8 @@ h4 {
 
 .portfolio-thumb {
     margin-bottom: 24px;
+    width: 305px;
+    height: auto;
 }
 
 .portfolio-row {
@@ -763,17 +787,10 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(100, 84, 40, 0.7);
     padding: 40px 40px 40px 40px;
 }
-blockquote{
-    border-left: none;
-    font-size: 20px;
-    text-align: center;
-    color: #4d4d4d!important;
-    font-style: italic;
-    padding: 0px 0px;
-}
+
 .bold-link {
     font-weight: 900;
     text-decoration: underline!important;
@@ -825,15 +842,20 @@ blockquote{
     color: #364577!important;
     border-color: #364577!important;
 }
-
-
-
+blockquote{
+    border-left: none;
+    font-size: 20px;
+    text-align: center;
+    color: #4d4d4d!important;
+    font-style: italic;
+    padding: 0px 0px;
+}
 .bg-banniere {
-    background-image: url("img/la-chouette-agence-banniere.webp");
+    background-image: url("../img/la-chouette-agence-banniere.webp");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.webp");
+    background-image: url("../img/image-de-presentation.webp");
 }
 
 @media (max-width: 1024px) {
@@ -859,13 +881,13 @@ blockquote{
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -883,10 +905,6 @@ blockquote{
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -895,8 +913,6 @@ blockquote{
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
@@ -1027,15 +1043,19 @@ blockquote{
     .close-lightbox {
         display: inline-block;
     }
-    .blocsapp-device-iphone5 {
+    .blocsapp-iphone5 {
         background-size: 216px 425px;
         padding-top: 60px;
         width: 216px;
         height: 425px;
     }
-    .blocsapp-device-iphone5 img {
+    .blocsapp-iphone5 img {
         width: 180px;
         height: 320px;
+    }
+    .tight-width-whitespace {
+        max-width: 335px;
+        margin: auto auto auto auto;
     }
 }
 
